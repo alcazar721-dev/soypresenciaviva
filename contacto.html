@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto · Soy Presencia Viva</title>
+<meta name="description" content="Contacta con Soy Presencia Viva. WhatsApp, Instagram y email. Reserva tu sesión hoy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ebony:#505B40;--sage:#9BA187;--almond:#E8DACB;--almond-dark:#DDD0BC;--brown:#B66C48;--russet:#8C421F;--oscuro:#1E2118;--text-muted:#6B5C48;--blanco:#F9F4EE}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--almond);color:var(--oscuro);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:18px 64px;background:rgba(232,218,203,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(140,66,31,0.1)}
+.nav-marca{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;font-weight:400;color:var(--oscuro);text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:12px;font-weight:400;letter-spacing:0.1em;color:var(--text-muted);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--russet)}
+.nav-cta{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;background:var(--russet);color:var(--blanco);padding:11px 26px;border-radius:100px;text-decoration:none;transition:all 0.25s}
+.nav-cta:hover{background:var(--oscuro)}
+.page-wrap{padding-top:74px}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--brown);margin-bottom:26px}
+.label::before{content:'';width:22px;height:1px;background:var(--brown)}
+.label.light{color:rgba(232,218,203,0.5)}.label.light::before{background:rgba(232,218,203,0.3)}
+.label.sage{color:var(--sage)}.label.sage::before{background:var(--sage)}
+h2.serif{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.2vw,60px);font-weight:300;line-height:1.08;color:var(--oscuro);margin-bottom:26px}
+h2.serif em{font-style:italic;color:var(--russet)}
+h2.serif.light{color:var(--almond)}h2.serif.light em{color:var(--brown)}
+.body-p{font-size:15px;line-height:1.85;color:var(--text-muted);font-weight:300;margin-bottom:18px}
+.body-p strong{color:var(--brown);font-weight:500}
+.btn-primary{display:inline-flex;align-items:center;gap:12px;background:var(--russet);color:var(--blanco);font-size:12px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;padding:17px 36px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s}
+.btn-primary:hover{background:var(--oscuro);transform:translateY(-2px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:12px;background:transparent;color:var(--russet);font-size:12px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;padding:15px 34px;border-radius:100px;text-decoration:none;border:2px solid var(--russet);cursor:pointer;transition:all 0.3s}
+.btn-secondary:hover{background:var(--russet);color:var(--blanco)}
+footer{background:var(--oscuro);padding:48px 80px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
+.foot-marca{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;font-weight:300;color:var(--almond);margin-bottom:12px}
+.foot-desc{font-size:13px;color:rgba(232,218,203,0.4);line-height:1.7;font-weight:300}
+.foot-title{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--brown);margin-bottom:16px;font-weight:500}
+.foot-col{display:flex;flex-direction:column;gap:10px}
+.foot-col a{font-size:13px;color:rgba(232,218,203,0.35);text-decoration:none;transition:color 0.2s;font-weight:300}
+.foot-col a:hover{color:var(--brown)}
+.foot-bottom{background:var(--oscuro);border-top:1px solid rgba(232,218,203,0.06);padding:20px 80px;text-align:center;font-size:11px;color:rgba(232,218,203,0.2)}
+.sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:rgba(30,33,24,0.97);backdrop-filter:blur(16px);padding:13px 22px;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid rgba(182,108,72,0.14)}
+.sticky-info small{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(232,218,203,0.38);display:block}
+.sticky-info strong{font-size:16px;font-weight:400;color:var(--almond)}
+.btn-sticky{background:var(--russet);color:var(--blanco);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:12px 22px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;white-space:nowrap}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:960px){
+  nav{padding:14px 22px}.nav-links{display:none}
+  footer{grid-template-columns:1fr;padding:48px 24px}.foot-bottom{padding:20px 24px}
+  .sticky{display:flex}
+}
+</style>
+</head>
+<body>
+<nav><a href="index.html" class="nav-marca">Soy Presencia Viva</a><div class="nav-links"><a href="index.html" >Inicio</a><a href="sobre.html" >Sobre Yoana</a><a href="servicios.html" >Servicios</a><a href="eventos.html" >Eventos</a><a href="contacto.html" class="active">Contacto</a></div><a href="https://buy.stripe.com/aFa8wIbJK6mLb5JgalbAs00" class="nav-cta" target="_blank">Reservar plaza</a></nav>
+<div class="page-wrap">
+
+<style>
+.cont-hero{background:var(--ebony);padding:120px 80px 80px;text-align:center}
+.cont-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1050px;margin:0 auto}
+.cont-card{background:var(--blanco);border-radius:20px;padding:36px;border:1px solid rgba(140,66,31,0.08);display:flex;flex-direction:column;align-items:flex-start;gap:14px;margin-bottom:20px;transition:all 0.3s}
+.cont-card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(140,66,31,0.1)}
+.cont-icon{font-size:28px}
+.cont-label{font-size:10px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--brown)}
+.cont-val{font-size:16px;color:var(--oscuro);font-weight:400}
+.cont-val a{color:var(--russet);text-decoration:none}
+.faq-list details{border-bottom:1px solid rgba(140,66,31,0.12)}
+.faq-list details:first-of-type{border-top:1px solid rgba(140,66,31,0.12)}
+.faq-list summary{padding:22px 0;font-size:15px;font-weight:400;color:var(--oscuro);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color 0.2s}
+.faq-list summary:hover{color:var(--russet)}
+.faq-list summary::after{content:'+';font-size:22px;font-weight:300;color:var(--brown);transition:transform 0.3s;flex-shrink:0}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-r{font-size:14px;color:var(--text-muted);line-height:1.85;font-weight:300;padding-bottom:22px}
+@media(max-width:960px){
+  .cont-hero{padding:120px 24px 80px}
+  .cont-grid{grid-template-columns:1fr;gap:48px}
+}
+</style>
+
+<section class="cont-hero">
+  <div class="label light" style="justify-content:center">Contacto</div>
+  <h2 class="serif light" style="text-align:center">¿Tienes alguna<br><em>pregunta?</em></h2>
+  <p style="font-size:16px;color:rgba(232,218,203,0.55);font-weight:300;max-width:480px;margin:0 auto;line-height:1.75">Escríbenos por WhatsApp o Instagram. Respondemos en menos de 24 horas.</p>
+</section>
+
+<section style="background:var(--blanco);padding:100px 80px">
+  <div class="cont-grid">
+    <div>
+      <div class="label">Cómo contactarnos</div>
+      <h2 class="serif" style="margin-bottom:40px">Estamos<br><em>aquí.</em></h2>
+
+      <div class="cont-card">
+        <span class="cont-icon">💬</span>
+        <div class="cont-label">WhatsApp</div>
+        <div class="cont-val"><a href="https://wa.me/34603560263" target="_blank">603 56 02 63</a></div>
+        <p style="font-size:13px;color:var(--text-muted);font-weight:300">La forma más rápida de contactarnos. Para reservas, dudas y consultas.</p>
+      </div>
+
+      <div class="cont-card">
+        <span class="cont-icon">📷</span>
+        <div class="cont-label">Instagram</div>
+        <div class="cont-val"><a href="https://instagram.com/soypresenciaviva" target="_blank">@soypresenciaviva</a></div>
+        <p style="font-size:13px;color:var(--text-muted);font-weight:300">Síguenos para contenido, próximos eventos y acompañamiento diario.</p>
+      </div>
+
+      <div class="cont-card">
+        <span class="cont-icon">📧</span>
+        <div class="cont-label">Email</div>
+        <div class="cont-val"><a href="mailto:yoana@soypresenciaviva.com">yoana@soypresenciaviva.com</a></div>
+        <p style="font-size:13px;color:var(--text-muted);font-weight:300">Para consultas más detalladas o propuestas de colaboración.</p>
+      </div>
+
+      <div class="cont-card">
+        <span class="cont-icon">📍</span>
+        <div class="cont-label">Sesiones presenciales</div>
+        <div class="cont-val">Madrid Centro</div>
+        <p style="font-size:13px;color:var(--text-muted);font-weight:300">La dirección exacta se facilita al confirmar la reserva.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="label">Preguntas frecuentes</div>
+      <h2 class="serif" style="margin-bottom:40px">Resolvemos<br>tus <em>dudas.</em></h2>
+      <div class="faq-list">
+        <details><summary>¿Cómo reservo una sesión individual?</summary><p class="faq-r">Escríbenos por WhatsApp al 603 56 02 63 o por Instagram @soypresenciaviva. Te respondemos en menos de 24 horas para coordinar fecha y horario.</p></details>
+        <details><summary>¿Necesito experiencia previa?</summary><p class="faq-r">No. Las sesiones están diseñadas para cualquier persona, con o sin experiencia en trabajo somático. Solo necesitas disposición a estar presente.</p></details>
+        <details><summary>¿Cómo funcionan las sesiones online?</summary><p class="faq-r">Las sesiones online se realizan por videollamada (Zoom o Google Meet). Necesitas un espacio tranquilo donde puedas moverte con comodidad y ropa cómoda.</p></details>
+        <details><summary>¿Cuál es la diferencia entre online y presencial?</summary><p class="faq-r">Ambas modalidades son igualmente efectivas. La presencial permite un acompañamiento más directo y trabajo con el espacio físico. La online ofrece flexibilidad y comodidad desde tu propio entorno.</p></details>
+        <details><summary>¿Los bonos tienen fecha de caducidad?</summary><p class="faq-r">Los bonos tienen una validez de 6 meses desde la fecha de compra. Si necesitas más tiempo, consúltanos y buscamos una solución.</p></details>
+        <details><summary>¿Puedo regalar una sesión?</summary><p class="faq-r">Sí. Escríbenos por WhatsApp y te preparamos un regalo personalizado para quien tú quieras.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--russet);padding:80px;text-align:center">
+  <div class="label light" style="justify-content:center;margin-bottom:24px">¿Lista para empezar?</div>
+  <h2 class="serif light" style="text-align:center;margin-bottom:20px">Tu cuerpo lleva<br>tiempo <em>esperando.</em></h2>
+  <p style="font-size:16px;color:rgba(232,218,203,0.6);font-weight:300;max-width:440px;margin:0 auto 40px;line-height:1.75">El primer paso es el más importante. Escríbenos hoy.</p>
+  <a href="https://wa.me/34603560263?text=Hola%20Yoana%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20las%20sesiones" class="btn-primary" style="background:var(--almond);color:var(--russet)" target="_blank">Escribir por WhatsApp →</a>
+</section>
+
+</div>
+<footer>
+  <div><div class="foot-marca">Soy Presencia Viva</div><p class="foot-desc">Bienestar somático basado en el Método 5 Cuerpos. Madrid y online.</p></div>
+  <div><div class="foot-title">Páginas</div><div class="foot-col"><a href="index.html">Inicio</a><a href="sobre.html">Sobre Yoana</a><a href="servicios.html">Servicios</a><a href="eventos.html">Eventos</a><a href="contacto.html">Contacto</a></div></div>
+  <div><div class="foot-title">Contacto</div><div class="foot-col"><a href="https://instagram.com/soypresenciaviva" target="_blank">@soypresenciaviva</a><a href="https://wa.me/34603560263" target="_blank">603 56 02 63</a><a href="mailto:yoana@soypresenciaviva.com">yoana@soypresenciaviva.com</a></div></div>
+</footer><div class="foot-bottom">© 2025 Soy Presencia Viva · Todos los derechos reservados</div>
+<div class="sticky"><div class="sticky-info"><small>Soy Presencia Viva</small><strong>Reservar sesión grupal</strong></div><a href="https://buy.stripe.com/aFa8wIbJK6mLb5JgalbAs00" class="btn-sticky" target="_blank">Reservar</a></div>
+</body></html>

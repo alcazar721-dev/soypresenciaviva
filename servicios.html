@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios · Soy Presencia Viva</title>
+<meta name="description" content="Sesiones individuales online y presencial en Madrid. Bonos, talleres y retiros. Método 5 Cuerpos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ebony:#505B40;--sage:#9BA187;--almond:#E8DACB;--almond-dark:#DDD0BC;--brown:#B66C48;--russet:#8C421F;--oscuro:#1E2118;--text-muted:#6B5C48;--blanco:#F9F4EE}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--almond);color:var(--oscuro);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:18px 64px;background:rgba(232,218,203,0.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(140,66,31,0.1)}
+.nav-marca{font-family:'Cormorant Garamond',serif;font-size:19px;font-style:italic;font-weight:400;color:var(--oscuro);text-decoration:none}
+.nav-links{display:flex;align-items:center;gap:32px}
+.nav-links a{font-size:12px;font-weight:400;letter-spacing:0.1em;color:var(--text-muted);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover,.nav-links a.active{color:var(--russet)}
+.nav-cta{font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;background:var(--russet);color:var(--blanco);padding:11px 26px;border-radius:100px;text-decoration:none;transition:all 0.25s}
+.nav-cta:hover{background:var(--oscuro)}
+.page-wrap{padding-top:74px}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--brown);margin-bottom:26px}
+.label::before{content:'';width:22px;height:1px;background:var(--brown)}
+.label.light{color:rgba(232,218,203,0.5)}.label.light::before{background:rgba(232,218,203,0.3)}
+.label.sage{color:var(--sage)}.label.sage::before{background:var(--sage)}
+h2.serif{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4.2vw,60px);font-weight:300;line-height:1.08;color:var(--oscuro);margin-bottom:26px}
+h2.serif em{font-style:italic;color:var(--russet)}
+h2.serif.light{color:var(--almond)}h2.serif.light em{color:var(--brown)}
+.body-p{font-size:15px;line-height:1.85;color:var(--text-muted);font-weight:300;margin-bottom:18px}
+.body-p strong{color:var(--brown);font-weight:500}
+.btn-primary{display:inline-flex;align-items:center;gap:12px;background:var(--russet);color:var(--blanco);font-size:12px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;padding:17px 36px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s}
+.btn-primary:hover{background:var(--oscuro);transform:translateY(-2px)}
+.btn-secondary{display:inline-flex;align-items:center;gap:12px;background:transparent;color:var(--russet);font-size:12px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;padding:15px 34px;border-radius:100px;text-decoration:none;border:2px solid var(--russet);cursor:pointer;transition:all 0.3s}
+.btn-secondary:hover{background:var(--russet);color:var(--blanco)}
+footer{background:var(--oscuro);padding:48px 80px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
+.foot-marca{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;font-weight:300;color:var(--almond);margin-bottom:12px}
+.foot-desc{font-size:13px;color:rgba(232,218,203,0.4);line-height:1.7;font-weight:300}
+.foot-title{font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--brown);margin-bottom:16px;font-weight:500}
+.foot-col{display:flex;flex-direction:column;gap:10px}
+.foot-col a{font-size:13px;color:rgba(232,218,203,0.35);text-decoration:none;transition:color 0.2s;font-weight:300}
+.foot-col a:hover{color:var(--brown)}
+.foot-bottom{background:var(--oscuro);border-top:1px solid rgba(232,218,203,0.06);padding:20px 80px;text-align:center;font-size:11px;color:rgba(232,218,203,0.2)}
+.sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:rgba(30,33,24,0.97);backdrop-filter:blur(16px);padding:13px 22px;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid rgba(182,108,72,0.14)}
+.sticky-info small{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(232,218,203,0.38);display:block}
+.sticky-info strong{font-size:16px;font-weight:400;color:var(--almond)}
+.btn-sticky{background:var(--russet);color:var(--blanco);font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:12px 22px;border-radius:100px;text-decoration:none;border:none;cursor:pointer;white-space:nowrap}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:960px){
+  nav{padding:14px 22px}.nav-links{display:none}
+  footer{grid-template-columns:1fr;padding:48px 24px}.foot-bottom{padding:20px 24px}
+  .sticky{display:flex}
+}
+</style>
+</head>
+<body>
+<nav><a href="index.html" class="nav-marca">Soy Presencia Viva</a><div class="nav-links"><a href="index.html" >Inicio</a><a href="sobre.html" >Sobre Yoana</a><a href="servicios.html" class="active">Servicios</a><a href="eventos.html" >Eventos</a><a href="contacto.html" >Contacto</a></div><a href="https://buy.stripe.com/aFa8wIbJK6mLb5JgalbAs00" class="nav-cta" target="_blank">Reservar plaza</a></nav>
+<div class="page-wrap">
+
+<style>
+.serv-hero{background:var(--ebony);padding:120px 80px 80px;text-align:center}
+.serv-card-big{background:var(--blanco);border-radius:24px;padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;border:1px solid rgba(140,66,31,0.08);margin-bottom:24px;transition:all 0.3s}
+.serv-card-big:hover{box-shadow:0 16px 48px rgba(140,66,31,0.1)}
+.precio-big{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;color:var(--russet);line-height:1}
+.precio-sup{font-size:28px;vertical-align:super}
+.serv-tag{font-size:10px;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--brown);margin-bottom:16px;display:block}
+.serv-h3{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3vw,42px);font-weight:300;color:var(--oscuro);margin-bottom:16px;line-height:1.2}
+.serv-h3 em{font-style:italic;color:var(--russet)}
+.incluye{list-style:none;display:flex;flex-direction:column;gap:10px;margin:20px 0}
+.incluye li{display:flex;gap:10px;font-size:14px;color:var(--text-muted);font-weight:300;align-items:flex-start}
+.incluye li::before{content:'✓';color:var(--sage);flex-shrink:0;font-weight:500}
+.bono-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.bono-card{background:var(--blanco);border-radius:20px;padding:32px;border:1px solid rgba(140,66,31,0.08);text-align:center;transition:all 0.3s}
+.bono-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(140,66,31,0.1)}
+.bono-card.destacado{background:var(--oscuro);border-color:var(--brown)}
+.bono-precio{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:var(--russet);line-height:1;margin-bottom:4px}
+.bono-card.destacado .bono-precio{color:var(--brown)}
+.bono-nombre{font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--brown);margin-bottom:14px}
+.bono-card.destacado .bono-nombre{color:rgba(232,218,203,0.5)}
+.bono-desc{font-size:13px;color:var(--text-muted);line-height:1.7;font-weight:300}
+.bono-card.destacado .bono-desc{color:rgba(232,218,203,0.6)}
+.ahorro{display:inline-block;background:var(--sage);color:var(--blanco);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:16px}
+.prox{background:rgba(140,66,31,0.05);border:2px dashed rgba(140,66,31,0.2);border-radius:20px;padding:48px;text-align:center}
+@media(max-width:960px){
+  .serv-hero{padding:120px 24px 80px}
+  .serv-card-big{grid-template-columns:1fr;gap:32px;padding:32px}
+  .bono-grid{grid-template-columns:1fr}
+}
+</style>
+
+<section class="serv-hero">
+  <div class="label light" style="justify-content:center">Servicios</div>
+  <h2 class="serif light" style="text-align:center">Elige cómo<br>quieres <em>empezar.</em></h2>
+  <p style="font-size:16px;color:rgba(232,218,203,0.55);font-weight:300;max-width:500px;margin:0 auto;line-height:1.75">Desde una primera sesión hasta un proceso de acompañamiento continuo.</p>
+</section>
+
+<section style="background:var(--almond-dark);padding:100px 80px">
+  <div style="max-width:1050px;margin:0 auto">
+    <div class="label">Sesiones individuales</div>
+    <h2 class="serif">Un espacio solo<br><em>para ti.</em></h2>
+
+    <div class="serv-card-big">
+      <div>
+        <span class="serv-tag">Online · Videollamada</span>
+        <h3 class="serv-h3">Sesión individual<br><em>online</em></h3>
+        <p class="body-p">Trabajo somático personalizado desde donde estés. Ideal para quienes no pueden desplazarse o prefieren la comodidad de su propio espacio.</p>
+        <ul class="incluye">
+          <li>60 minutos de sesión personalizada</li>
+          <li>Trabajo con respiración y movimiento consciente</li>
+          <li>Integración y cierre guiado</li>
+          <li>Acceso por videollamada (Zoom / Meet)</li>
+        </ul>
+        <a href="https://wa.me/34603560263?text=Hola%20Yoana%2C%20me%20gustar%C3%ADa%20reservar%20una%20sesi%C3%B3n%20online" class="btn-primary" target="_blank" style="margin-top:8px">Reservar por WhatsApp →</a>
+      </div>
+      <div style="text-align:center">
+        <div class="precio-big"><span class="precio-sup">€</span>35</div>
+        <p style="font-size:13px;color:var(--text-muted);margin-top:8px">por sesión</p>
+      </div>
+    </div>
+
+    <div class="serv-card-big">
+      <div>
+        <span class="serv-tag">Presencial · Madrid</span>
+        <h3 class="serv-h3">Sesión individual<br><em>presencial</em></h3>
+        <p class="body-p">Sesión privada en Madrid. El contacto con el espacio físico permite un trabajo más profundo y un acompañamiento más presente.</p>
+        <ul class="incluye">
+          <li>60-75 minutos de sesión personalizada</li>
+          <li>Trabajo somático completo: cuerpo, emoción y energía</li>
+          <li>Espacio íntimo y preparado para la sesión</li>
+          <li>Integración y cierre presencial</li>
+        </ul>
+        <a href="https://wa.me/34603560263?text=Hola%20Yoana%2C%20me%20gustar%C3%ADa%20reservar%20una%20sesi%C3%B3n%20presencial%20en%20Madrid" class="btn-primary" target="_blank" style="margin-top:8px">Reservar por WhatsApp →</a>
+      </div>
+      <div style="text-align:center">
+        <div class="precio-big"><span class="precio-sup">€</span>150</div>
+        <p style="font-size:13px;color:var(--text-muted);margin-top:8px">por sesión</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--blanco);padding:100px 80px">
+  <div style="max-width:1050px;margin:0 auto">
+    <div class="label">Bonos de sesiones</div>
+    <h2 class="serif">Un proceso,<br>no solo <em>una sesión.</em></h2>
+    <p class="body-p" style="max-width:580px">La transformación real ocurre en el tiempo. Los bonos te permiten comprometerte con un proceso y ahorrar.</p>
+    <div class="bono-grid">
+      <div class="bono-card">
+        <div class="bono-precio">€95</div>
+        <div class="bono-nombre">Bono 3 sesiones online</div>
+        <p class="bono-desc">3 sesiones individuales online. Ahorra 10€ respecto al precio unitario.</p>
+        <a href="https://wa.me/34603560263" class="btn-secondary" style="margin-top:20px;font-size:11px;padding:12px 24px" target="_blank">Consultar</a>
+      </div>
+      <div class="bono-card destacado">
+        <span class="ahorro">Más popular</span>
+        <div class="bono-precio">€420</div>
+        <div class="bono-nombre">Bono 3 sesiones presencial</div>
+        <p class="bono-desc">3 sesiones presenciales en Madrid. Ahorra 30€ y aseguras continuidad en tu proceso.</p>
+        <a href="https://wa.me/34603560263" class="btn-primary" style="margin-top:20px;font-size:11px;padding:12px 24px;display:inline-flex" target="_blank">Consultar</a>
+      </div>
+      <div class="bono-card">
+        <div class="bono-precio">€240</div>
+        <div class="bono-nombre">Bono mixto 3+3</div>
+        <p class="bono-desc">3 sesiones online + 3 online. Flexibilidad total para adaptar el proceso a tu ritmo de vida.</p>
+        <a href="https://wa.me/34603560263" class="btn-secondary" style="margin-top:20px;font-size:11px;padding:12px 24px" target="_blank">Consultar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--almond-dark);padding:100px 80px">
+  <div style="max-width:1050px;margin:0 auto">
+    <div class="label">Talleres y retiros</div>
+    <h2 class="serif">Experiencias<br><em>grupales.</em></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px">
+      <div class="prox">
+        <p style="font-size:32px;margin-bottom:16px">🌿</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--oscuro);margin-bottom:12px">Talleres grupales</h3>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;font-weight:300;margin-bottom:20px">Sesiones grupales temáticas. Trabajo somático colectivo en espacios seguros e íntimos.</p>
+        <span style="font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage)">Próximamente</span>
+      </div>
+      <div class="prox">
+        <p style="font-size:32px;margin-bottom:16px">🏔️</p>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--oscuro);margin-bottom:12px">Retiros</h3>
+        <p style="font-size:14px;color:var(--text-muted);line-height:1.7;font-weight:300;margin-bottom:20px">Experiencias de inmersión de 2-3 días. Naturaleza, trabajo somático intensivo y comunidad.</p>
+        <span style="font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage)">Próximamente</span>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:32px;font-size:14px;color:var(--text-muted)">¿Quieres que te avisemos? Escríbenos por <a href="https://wa.me/34603560263" style="color:var(--russet);text-decoration:none" target="_blank">WhatsApp</a> o síguenos en <a href="https://instagram.com/soypresenciaviva" style="color:var(--russet);text-decoration:none" target="_blank">Instagram</a></p>
+  </div>
+</section>
+
+</div>
+<footer>
+  <div><div class="foot-marca">Soy Presencia Viva</div><p class="foot-desc">Bienestar somático basado en el Método 5 Cuerpos. Madrid y online.</p></div>
+  <div><div class="foot-title">Páginas</div><div class="foot-col"><a href="index.html">Inicio</a><a href="sobre.html">Sobre Yoana</a><a href="servicios.html">Servicios</a><a href="eventos.html">Eventos</a><a href="contacto.html">Contacto</a></div></div>
+  <div><div class="foot-title">Contacto</div><div class="foot-col"><a href="https://instagram.com/soypresenciaviva" target="_blank">@soypresenciaviva</a><a href="https://wa.me/34603560263" target="_blank">603 56 02 63</a><a href="mailto:yoana@soypresenciaviva.com">yoana@soypresenciaviva.com</a></div></div>
+</footer><div class="foot-bottom">© 2025 Soy Presencia Viva · Todos los derechos reservados</div>
+<div class="sticky"><div class="sticky-info"><small>Soy Presencia Viva</small><strong>Reservar sesión grupal</strong></div><a href="https://buy.stripe.com/aFa8wIbJK6mLb5JgalbAs00" class="btn-sticky" target="_blank">Reservar</a></div>
+</body></html>
